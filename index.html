@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Using Jest Matchers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Using Jest Matchers</h1>
+        <div class="container">
+            <h3>Number</h3>
+            <div>
+                <div class="form">
+                    <div>
+                        <label for="numberA">Number 1:</label>
+                        <input id="numberA" name="numberA">
+                    </div>
+                    <div>
+                        <label for="numberB">Number 2:</label>
+                        <input  id="numberB" name="numberB">
+                    </div>               
+                </div>
+                <div class="actions">
+                    <button type="button" id="compareNumbersBtn">COMPARE</button>
+                </div>
+                <div class="resultDiv">
+                    <p>Result: <span id="compareNumbersResult">---</span></p>
+                </div>
+                <div class="actions">
+                    <button type="button" id="addNumbersBtn">ADD</button>
+                    <button type="button" id="checkNegativeBtn">CHECK NEGATIVE RESULT</button>
+                </div>
+                <div class="resultDiv">
+                    <p>Result: <span id="addNumbersResult">---</span></p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="container">
+            <h3>String</h3>
+            <div>
+                <div class="form">
+                    <div>
+                        <label for="stringCap">Enter your Name</label>
+                        <input type="text" id="stringCap" name="stringCap">
+                    </div>     
+                </div>
+                <div class="actions">
+                    <button type="button" id="hellohBtn">SAY HELLO</button> 
+                    <button type="button" id="stringCapBtn">CAPITALIZE</button> 
+                </div>
+                <div class="resultDiv">
+                    <p>Result: <span id="stringCapResult">---</span></p>
+                </div>  
+            </div>
+        </div>
+            <div class="container">
+            <h3>Array</h3>
+            <div>
+                <div class="form">
+                    <div>
+                        <label for="addItemName">Add Item:</label>
+                        <input type="text" id="addItemName" name="addItemName">
+                    </div>             
+                </div>
+                <div class="actions">
+                    <button type="button" id="addItemBtn">ADD</button>
+                </div>               
+            </div>
+            <div class="resultDiv">
+                <p>List: <span id="arrayResult">---</span></p>
+            </div>
+            <div class="form">
+                    <div>
+                        <label for="removeItemName">Remove Item:</label>
+                        <input type="text" id="removeItemName" name="removeItemName">
+                    </div>             
+                </div>
+                <div class="actions">
+                    <button type="button" id="removeItemBtn">REMOVE</button>
+           
+                </div> 
+                 
+        </div>
+        <div class="container">
+            <h3>Object</h3>
+            <div>
+                <div class="form">
+                    <div>
+                        <label for="username">Name</label>
+                        <input type="text" id="username" name="username">
+                    </div>   
+                     <div>
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age">
+                    </div>    
+                </div>
+                <div class="actions">
+                    <button type="button" id="addObjBtn">Create New Object</button> 
+                </div>  
+            </div>
+            <div class="resultDiv">
+                <div>
+                    <p>New User: <span id="objResult">---</span></p>
+                </div>   
+                
+            </div>
+        </div>
+        <script type="module" src="script.js" async defer></script>
+    </body>
+</html>
