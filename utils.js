@@ -1,42 +1,39 @@
+export const parseAndValidateNumber = (value) => {
+    if(typeof value !== "string" && typeof value !== "number") throw new Error("Please enter valid numbers");
+    
+    if(typeof value === "string" && value.trim() === "") throw new Error("Please enter valid numbers");
 
+    const parsedNumber = Number(value);
+    if(Number.isNaN(parsedNumber)) throw new Error("Please enter valid numbers");
+    
+    return parsedNumber;
+}
+
+export const compareNumbers = (a, b) => {
+    const parsedNumberA = parseAndValidateNumber(a);
+    const parsedNumberB = parseAndValidateNumber(b);
+
+    return parsedNumberA > parsedNumberB
+}
+    
 export const addNumbers = (a, b) => {
-    return a + b;
+   const parsedNumberA = parseAndValidateNumber(a);
+    const parsedNumberB = parseAndValidateNumber(b);
+
+   return parsedNumberA + parsedNumberB;
 }
 
 export const checkNegative = (value) => {
     return value < 0
 }
-    
-export const compareNumbers = (a, b) => {
-    if (a > b) {
-        return true;
-    } 
-    else{
-        return false;
-    }
-}
-
-const invalidValue = (value) => {
-     if(typeof value === "string" && value.trim() === "") return true;
-     else if(isNaN(value)) return true;
-     else return false;
-
-}
-
-export const checkIfNumber = (a, b) => {
-      if(invalidValue(a) || invalidValue(b)) {
-        throw new Error("Please enter valid numbers");
-      }
-}
-
-
-export const capitalizeString = (string) => {
-    return string.toUpperCase();
-}   
 
 export const sayHello = (string) => {
     return "Hello " + string + "!";
 }
+
+export const capitalizeString = (string) => {
+    return string.toUpperCase();
+}   
 
 export const addItemArray = (array, item) => {
     array.push(item);

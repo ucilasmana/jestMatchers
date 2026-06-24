@@ -48,8 +48,7 @@ const clearInputs= (...inputElements) =>{
 //Number Section
 addNumbersBtn.addEventListener("click", () =>{
     try{
-        checkIfNumber(numberA.value, numberB.value);
-        addNumbersResultValue = addNumbers(parseFloat(numberA.value), parseFloat(numberB.value));
+        addNumbersResultValue = addNumbers(numberA.value, numberB.value);
         addNumbersResult.innerText= addNumbersResultValue;
     }
     catch(error){
@@ -60,13 +59,9 @@ addNumbersBtn.addEventListener("click", () =>{
 })
 
 compareNumbersBtn.addEventListener("click", () =>{
-    try{
-        checkIfNumber(numberA.value, numberB.value)
+    try{ 
         
-        const a = parseFloat(numberA.value);
-        const b = parseFloat(numberB.value);
-
-        const isGreater = compareNumbers(a, b);
+        const isGreater = compareNumbers(numberA.value, numberB.value);
 
         if (isGreater) {
             compareNumbersResult.innerText = a + " is greater than " + b;
